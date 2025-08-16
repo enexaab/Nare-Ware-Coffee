@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nare  Ware Coffee | Premium Ethiopian Coffee Exporters</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' viewBox='0 0 1200 600'%3E%3Crect width='1200' height='600' fill='%23523A28'/%3E%3Cpath d='M0,400 C200,450 400,300 600,350 C800,400 1000,350 1200,400 L1200,600 L0,600 Z' fill='%23654321'/%3E%3Cpath d='M0,450 C200,500 400,400 600,450 C800,500 1000,450 1200,500 L1200,600 L0,600 Z' fill='%23795C34'/%3E%3Cpath d='M0,500 C200,550 400,500 600,550 C800,600 1000,550 1200,600 L1200,600 L0,600 Z' fill='%238B4513'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+}
+
+        .coffee-bean {
+            position: relative;
+            width: 60px;
+            height: 40px;
+            background: #5D4037;
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+        .coffee-bean:before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 15px;
+            width: 30px;
+            height: 30px;
+            background: #3E2723;
+            border-radius: 50%;
+        }
+        .coffee-bean:after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            width: 10px;
+            height: 10px;
+            background: #5D4037;
+            border-radius: 50%;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+        .testimonial-card {
+            position: relative;
+        }
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 60px;
+            font-family: 'Playfair Display', serif;
+            color: rgba(121, 92, 52, 0.1);
+        }
+        .process-step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            right: -50%;
+            width: 100%;
+            height: 2px;
+            background: #D7B377;
+        }
+        .scroll-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+        }
+        @media (max-width: 768px) {
+            .process-step:not(:last-child):after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-amber-50 text-gray-800">
+    <!-- Navigation -->
+   <!-- Navbar -->
+<header class="fixed top-0 left-0 w-full bg-amber-900/80 backdrop-blur-md shadow-lg z-50">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center space-x-2 group">
+        <div class="w-12 h-12 relative">
+          <img src="assets/logo.jpg" alt="Nare Ware Coffee Logo" class="w-full h-full object-contain rounded-full ring-2 ring-amber-500 group-hover:ring-amber-300 transition">
+        </div>
+        <div>
+          <span class="text-2xl font-bold text-amber-200">Nare Ware</span>
+          <span class="text-2xl font-light text-amber-400">Coffee</span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#home" class="text-white hover:text-amber-400 transition-colors duration-300">Home</a>
+        <a href="#about" class="text-white hover:text-amber-400 transition-colors duration-300">About</a>
+        <a href="#products" class="text-white hover:text-amber-400 transition-colors duration-300">Products</a>
+        <a href="#process" class="text-white hover:text-amber-400 transition-colors duration-300">Process</a>
+        <a href="#sustainability" class="text-white hover:text-amber-400 transition-colors duration-300">Sustainability</a>
+        <a href="#contact" class="text-white hover:text-amber-400 transition-colors duration-300">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden text-amber-200 hover:text-amber-400 focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="hidden flex-col space-y-4 mt-4 bg-amber-800 rounded-lg p-4 text-white md:hidden animate-slide-down">
+      <a href="#home" class="hover:text-amber-400 transition">Home</a>
+      <a href="#about" class="hover:text-amber-400 transition">About</a>
+      <a href="#products" class="hover:text-amber-400 transition">Products</a>
+      <a href="#process" class="hover:text-amber-400 transition">Process</a>
+      <a href="#sustainability" class="hover:text-amber-400 transition">Sustainability</a>
+      <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const menuButton = document.getElementById("mobile-menu-button");
+  const mobileMenuEl = document.getElementById("mobile-menu");
+
+  menuButton.addEventListener("click", () => {
+    mobileMenuEl.classList.toggle("hidden");
+  });
+</script>
+
+<style>
+  /* Fancy mobile slide-down animation */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-slide-down {
+    animation: slideDown 0.3s ease-out;
+  }
+</style>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Premium Ethiopian Coffee</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">From the highlands of Ethiopia to your cup. Experience the rich heritage and exceptional quality of Nare Ware Coffee.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#products" class="bg-amber-800 hover:bg-amber-900 text-white font-medium py-3 px-8 rounded-full transition duration-300">Explore Our Coffee</a>
+                <a href="#contact" class="bg-transparent hover:bg-white hover:text-amber-800 text-white font-medium py-3 px-8 rounded-full border-2 border-white transition duration-300">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card bg-amber-50 p-8 rounded-xl shadow-md text-center transition duration-300">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Ethically Sourced</h3>
+                    <p class="text-gray-600">Our coffee is grown with respect for the environment and fair compensation for farmers.</p>
+                </div>
+                
+                <div class="feature-card bg-amber-50 p-8 rounded-xl shadow-md text-center transition duration-300">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Premium Quality</h3>
+                    <p class="text-gray-600">Handpicked beans from the highlands of Ethiopia, known for their exceptional flavor profiles.</p>
+                </div>
+                
+                <div class="feature-card bg-amber-50 p-8 rounded-xl shadow-md text-center transition duration-300">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Direct Export</h3>
+                    <p class="text-gray-600">From our farms to your business, we handle the entire export process with care and efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="relative">
+                        <div class="w-full h-96 bg-amber-800 rounded-lg relative overflow-hidden">
+                           <img src="assets/2.png" alt="Nare  Ware Coffee Logo" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                               
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-amber-200 rounded-lg -z-10"></div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
+                    <p class="text-gray-700 mb-6">Founded in 2005, Nare  Ware Coffee is a family-owned business with deep roots in the coffee-growing regions of Ethiopia. Our journey began in the highlands of Sidamo, where our founder's family has been cultivating coffee for generations.</p>
+                    
+                    <p class="text-gray-700 mb-6">We take pride in our Ethiopian heritage and the exceptional quality of our coffee beans. Our mission is to share the rich flavors of Ethiopian coffee with the world while supporting sustainable farming practices and improving the lives of local communities.</p>
+                    
+                    <p class="text-gray-700 mb-8">Today, Nare  Ware Coffee is a leading exporter of premium Ethiopian coffee, supplying specialty coffee shops, roasters, and distributors worldwide. We maintain direct relationships with our network of small-scale farmers, ensuring fair compensation and sustainable growing practices.</p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <div class="text-3xl font-bold text-amber-800">15+</div>
+                            <p class="text-gray-600">Years of Experience</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-amber-800">500+</div>
+                            <p class="text-gray-600">Partner Farmers</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-amber-800">30+</div>
+                            <p class="text-gray-600">Countries Exported To</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-amber-800">100%</div>
+                            <p class="text-gray-600">Organic Certified</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Premium Coffee</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover our selection of premium Ethiopian coffee varieties, each with its unique flavor profile and character.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <div class="w-full h-full bg-amber-700 flex items-center justify-center">
+                            <img src="assets/coffee.webp" alt="Nare  Ware Coffee Logo" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-semibold">Sidamo Reserve</h3>
+                            <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Premium</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">A bright, complex coffee with citrus notes, floral aromatics, and a smooth, wine-like finish. Grown at high altitudes in the Sidamo region.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-sm text-gray-500">Flavor Profile:</span>
+                                <div class="flex space-x-1 mt-1">
+                                    <span class="bg-amber-50 text-amber-800 text-xs px-2 py-1 rounded">Citrus</span>
+                                    <span class="bg-amber-50 text-amber-800 text-xs px-2 py-1 rounded">Floral</span>
+                                    <span class="bg-amber-50 text-amber-800 text-xs px-2 py-1 rounded">Smooth</span>
+                                </div>
+                            </div>
+                            <a href="#contact" class="text-amber-800 hover:text-amber-900 font-medium">Inquire →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <div class="w-full h-full bg-amber-800 flex items-center justify-center">
+                          <img src="assets/6.jpg" alt="Nare  Ware Coffee Logo" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-semibold">Yirgacheffe Wild</h3>
+                            <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Specialty</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">A delicate, tea-like coffee with distinctive floral notes, bright acidity, and a clean finish. Sourced from wild coffee trees in Yirgacheffe.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-sm text-gray-500">Flavor Profile:</span>
+                                <div class="flex space-x-1 mt-1">
+                                    <span class="bg-amber-50 text-amber-800 text-xs px-2 py-1 rounded">Floral</span>
+                                    <span class="bg-amber-50 text-amber-800 text-xs px-2 py-1 rounded">Bright</span>
+                                    <span class="bg-amber-50 text-amber-800 text-xs px-2 py-1 rounded">Clean</span>
+                                </div>
+                            </div>
+                            <a href="#contact" class="text-amber-800 hover:text-amber-900 font-medium">Inquire →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <div class="w-full h-full bg-amber-900 flex items-center justify-center">
+                          <img src="assets/7.png" alt="Nare  Ware Coffee Logo" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-semibold">Harrar Mocha</h3>
+                            <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Exclusive</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">A full-bodied coffee with rich chocolate notes, hints of spice, and a winey acidity. Dry-processed beans from the eastern Harrar region.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-sm text-gray-500">Flavor Profile:</span>
+                                <div class="flex space-x-1 mt-1">
+                                    <span class="bg-amber-50 text-amber-800 text-xs px-2 py-1 rounded">Chocolate</span>
+                                    <span class="bg-amber-50 text-amber-800 text-xs px-2 py-1 rounded">Spicy</span>
+                                    <span class="bg-amber-50 text-amber-800 text-xs px-2 py-1 rounded">Winey</span>
+                                </div>
+                            </div>
+                            <a href="#contact" class="text-amber-800 hover:text-amber-900 font-medium">Inquire →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <h3 class="text-2xl font-semibold mb-6">Custom Orders & Bulk Pricing</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-8">We offer custom blends and packaging options for businesses of all sizes. Contact us to discuss your specific requirements and get a personalized quote.</p>
+                <a href="#contact" class="bg-amber-800 hover:bg-amber-900 text-white font-medium py-3 px-8 rounded-full transition duration-300">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">From Farm to Cup</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Our meticulous process ensures the highest quality coffee from cultivation to export.</p>
+            </div>
+            
+            <div class="relative">
+                <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-amber-200 -translate-y-1/2"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Step 1 -->
+                    <div class="process-step relative">
+                        <div class="bg-white rounded-xl shadow-md p-6 text-center relative z-10">
+                            <div class="w-16 h-16 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center">
+                                <svg class="w-8 h-8 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Cultivation</h3>
+                            <p class="text-gray-600">Our coffee is grown in the ideal climate of Ethiopian highlands, at elevations of 1,500-2,200 meters.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="process-step relative">
+                        <div class="bg-white rounded-xl shadow-md p-6 text-center relative z-10">
+                            <div class="w-16 h-16 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center">
+                                <svg class="w-8 h-8 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Harvesting</h3>
+                            <p class="text-gray-600">Coffee cherries are carefully handpicked at peak ripeness to ensure optimal flavor development.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="process-step relative">
+                        <div class="bg-white rounded-xl shadow-md p-6 text-center relative z-10">
+                            <div class="w-16 h-16 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center">
+                                <svg class="w-8 h-8 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Processing</h3>
+                            <p class="text-gray-600">We use both washed and natural processing methods to bring out the unique characteristics of each coffee variety.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="process-step relative">
+                        <div class="bg-white rounded-xl shadow-md p-6 text-center relative z-10">
+                            <div class="w-16 h-16 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center">
+                                <svg class="w-8 h-8 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Export</h3>
+                            <p class="text-gray-600">We handle all aspects of export, ensuring our coffee reaches you in perfect condition with all necessary certifications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16">
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <h3 class="text-2xl font-semibold mb-6 text-center">Quality Control & Certifications</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-lg font-medium mb-4 flex items-center">
+                                <svg class="w-5 h-5 text-amber-800 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Quality Assurance
+                            </h4>
+                            <p class="text-gray-600 mb-4">Our quality control process includes multiple stages of inspection and cupping to ensure only the finest beans make it to our customers.</p>
+                            <ul class="text-gray-600 space-y-2">
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-amber-800 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Rigorous sorting and grading
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-amber-800 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Professional cupping and tasting
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-amber-800 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Moisture content monitoring
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-medium mb-4 flex items-center">
+                                <svg class="w-5 h-5 text-amber-800 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Certifications
+                            </h4>
+                            <p class="text-gray-600 mb-4">Our coffee meets the highest international standards and carries multiple certifications that reflect our commitment to quality and sustainability.</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-amber-50 p-3 rounded-lg text-center">
+                                    <span class="font-medium text-amber-800">Winner Of Cup Of Excellence</span>
+                                </div>
+                                <!-- <div class="bg-amber-50 p-3 rounded-lg text-center">
+                                    <span class="font-medium text-amber-800">Fair Trade</span>
+                                </div> -->
+                                <!-- <div class="bg-amber-50 p-3 rounded-lg text-center">
+                                    <span class="font-medium text-amber-800">Rainforest Alliance</span>
+                                </div>
+                                <div class="bg-amber-50 p-3 rounded-lg text-center">
+                                    <span class="font-medium text-amber-800">UTZ Certified</span>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section id="sustainability" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Commitment to Sustainability</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We believe in responsible farming practices that protect the environment and support local communities.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-amber-50 rounded-xl p-8 h-full">
+                        <h3 class="text-2xl font-semibold mb-6">Environmental Responsibility</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-amber-800 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Shade-Grown Coffee</h4>
+                                    <p class="text-gray-600">Our coffee is grown under the natural canopy of native trees, preserving biodiversity and providing habitat for local wildlife.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-amber-800 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Water Conservation</h4>
+                                    <p class="text-gray-600">We implement water-saving processing techniques and water recycling systems to minimize our environmental impact.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-amber-800 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Organic Farming</h4>
+                                    <p class="text-gray-600">We use only organic fertilizers and natural pest control methods, avoiding harmful chemicals that damage the ecosystem.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-amber-800 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Renewable Energy</h4>
+                                    <p class="text-gray-600">Our processing facilities are increasingly powered by solar energy, reducing our carbon footprint.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-amber-50 rounded-xl p-8 h-full">
+                        <h3 class="text-2xl font-semibold mb-6">Community Support</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-amber-800 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Fair Compensation</h4>
+                                    <p class="text-gray-600">We pay our farmers above-market prices, ensuring they receive fair compensation for their hard work and exceptional coffee.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-amber-800 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Education Programs</h4>
+                                    <p class="text-gray-600">We invest in education for farmers' children and provide training in sustainable farming practices and business skills.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-amber-800 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Healthcare Access</h4>
+                                    <p class="text-gray-600">We support local healthcare initiatives, ensuring our farming communities have access to essential medical services.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-amber-800 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Women's Empowerment</h4>
+                                    <p class="text-gray-600">We actively promote gender equality through training and leadership opportunities for women in coffee farming communities.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#" class="inline-block bg-amber-800 hover:bg-amber-900 text-white font-medium py-3 px-8 rounded-full transition duration-300">Read Our Sustainability Report</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from businesses around the world who trust Nare  Ware Coffee for their premium Ethiopian coffee needs.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white rounded-xl shadow-md p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-amber-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Enyew Abebe</h4>
+                            <p class="text-gray-600 text-sm">Addis Ababa, Ethiopia</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Nare  Ware Coffee has been our trusted supplier for over 5 years. Their Yirgacheffe beans are consistently exceptional, and their export process is seamless. Our customers can taste the difference in every cup."</p>
+                    <div class="flex text-amber-400">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white rounded-xl shadow-md p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-amber-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Sophie Laurent</h4>
+                            <p class="text-gray-600 text-sm">Café Parisienne, France</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"The quality and consistency of Nare  Ware Coffee's beans are unmatched. Their commitment to sustainability aligns perfectly with our values, and our customers appreciate the story behind each cup we serve."</p>
+                    <div class="flex text-amber-400">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white rounded-xl shadow-md p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-amber-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Hiroshi Tanaka</h4>
+                            <p class="text-gray-600 text-sm">Tokyo Coffee Imports, Japan</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Working with Nare  Ware Coffee has been a pleasure. Their professionalism in handling export logistics and documentation is impressive, and the quality of their Sidamo beans is consistently outstanding."</p>
+                    <div class="flex text-amber-400">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Interested in our premium Ethiopian coffee? Contact us to discuss your requirements and learn more about our products and services.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+  <form id="contact-form" class="space-y-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+        <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500" placeholder="Enter your name" required>
+      </div>
+      
+      <div>
+        <label for="company" class="block text-gray-700 font-medium mb-2">Company Name</label>
+        <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500" placeholder="Enter your company name">
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+        <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500" placeholder="Enter your email" required>
+      </div>
+      
+      <div>
+        <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+        <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500" placeholder="Enter your phone number">
+      </div>
+    </div>
+    
+    <div>
+      <label for="interest" class="block text-gray-700 font-medium mb-2">I'm interested in</label>
+      <select id="interest" name="interest" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+        <option value="" selected disabled>Select your interest</option>
+        <option value="wholesale">Wholesale Coffee</option>
+        <option value="direct-trade">Direct Trade Partnership</option>
+        <option value="custom-blend">Custom Blend Development</option>
+        <option value="farm-visit">Farm Visit</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    
+    <div>
+      <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+      <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500" placeholder="Tell us about your requirements"></textarea>
+    </div>
+    
+    <div>
+      <button type="submit" class="w-full bg-amber-800 hover:bg-amber-900 text-white font-medium py-3 px-6 rounded-lg transition duration-300">Send Message</button>
+    </div>
+  </form>
+</div>
+
+<!-- Firebase Integration -->
+<script type="module">
+  // Import Firebase
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
+  // Your Firebase config (replace with your own from Firebase Console)
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID"
+  };
+
+  // Init Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Form Submit
+  document.getElementById("contact-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    try {
+      await addDoc(collection(db, "contactMessages"), {
+        name: document.getElementById("name").value,
+        company: document.getElementById("company").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        interest: document.getElementById("interest").value,
+        message: document.getElementById("message").value,
+        timestamp: new Date()
+      });
+
+      alert("Message sent successfully!");
+      e.target.reset();
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      alert("Error sending message. Try again.");
+    }
+  });
+</script>
+
+                
+                <div class="md:w-1/2 md:pl-8">
+                    <div class="bg-amber-50 rounded-xl p-8 h-full">
+                        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <svg class="w-5 h-5 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Main Office</h4>
+                                    <p class="text-gray-600">Bole Road, Addis Ababa, Ethiopia</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <svg class="w-5 h-5 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Email</h4>
+                                    <p class="text-gray-600">info@narecoffee.com</p>
+                                    <p class="text-gray-600">exports@narecoffee.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <svg class="w-5 h-5 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Phone</h4>
+                                    <p class="text-gray-600">+251 91 098 7045</p>
+                                    <p class="text-gray-600">+251 93 566 9926</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <svg class="w-5 h-5 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Business Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                                    <p class="text-gray-600">Saturday: 9:00 AM - 1:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-medium text-gray-800 mb-3">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/profile.php?id=61555211500581" target="_blank" class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-800 hover:bg-amber-800 hover:text-white transition duration-300">
+                               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                               <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                                     </svg>
+                                     </a>
+                                  <a href="https://www.instagram.com/nare_ware_coffee?igsh=NGdqZHRhazQ2ajZm" target="_blank"class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-800 hover:bg-amber-800 hover:text-white transition duration-300">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
+                                    </svg>
+                                   </a>
+                                   <a href="https://www.tiktok.com/@nare_ware_coffee?fbclid=IwY2xjawMNYhNleHRuA2FlbQIxMQABHmLiJzN8UApyafsIcs9NDwLCPB6XwpEgxMmdcaWufFxDAgN9e0ChhBxm3quB_aem_bADYBg0OYAtaLgbdiUMp8A" target="_blank"class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-800 hover:bg-amber-800 hover:text-white transition duration-300">
+                                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M12.3 2h3.1c.1 1.1.5 2.2 1.2 3 1 1 2.3 1.6 3.7 1.7v3.2c-1.3 0-2.6-.4-3.7-1.1v7.8c0 4-3.3 7.3-7.3 7.3S2 20.6 2 16.6c0-3.9 3.2-7.2 7.1-7.3v3.4c-2 .1-3.6 1.7-3.6 3.8 0 2.1 1.7 3.8 3.8 3.8s3.8-1.7 3.8-3.8V2z"/>
+                                   </svg>
+                                     </a>
+
+                                  <a href="" target="_blank"class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-800 hover:bg-amber-800 hover:text-white transition duration-300">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-amber-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 relative">
+                            <svg viewBox="0 0 24 24" class="w-full h-full text-amber-200" fill="currentColor">
+                                <path d="M2,21V19H20V21H2M20,8V5H18V8H20M20,3A2,2 0 0,1 22,5V8A2,2 0 0,1 20,10H18V13A4,4 0 0,1 14,17H8A4,4 0 0,1 4,13V3H20M16,5H6V13A2,2 0 0,0 8,15H14A2,2 0 0,0 16,13V5Z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="text-2xl font-bold text-amber-200">Nare</span>
+                            <span class="text-2xl font-light text-amber-300">Coffee</span>
+                        </div>
+                    </a>
+                    <p class="text-amber-200 opacity-80 mb-6">Premium Ethiopian coffee, ethically sourced and expertly exported to bring the authentic taste of Ethiopia to the world.</p>
+                      <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/profile.php?id=61555211500581" target="_blank" class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-800 hover:bg-amber-800 hover:text-white transition duration-300">
+                               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                               <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                                     </svg>
+                                     </a>
+                                  <a href="https://www.instagram.com/nare_ware_coffee?igsh=NGdqZHRhazQ2ajZm" target="_blank"class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-800 hover:bg-amber-800 hover:text-white transition duration-300">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
+                                    </svg>
+                                   </a>
+                                   <a href="https://www.tiktok.com/@nare_ware_coffee?fbclid=IwY2xjawMNYhNleHRuA2FlbQIxMQABHmLiJzN8UApyafsIcs9NDwLCPB6XwpEgxMmdcaWufFxDAgN9e0ChhBxm3quB_aem_bADYBg0OYAtaLgbdiUMp8A" target="_blank"class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-800 hover:bg-amber-800 hover:text-white transition duration-300">
+                                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M12.3 2h3.1c.1 1.1.5 2.2 1.2 3 1 1 2.3 1.6 3.7 1.7v3.2c-1.3 0-2.6-.4-3.7-1.1v7.8c0 4-3.3 7.3-7.3 7.3S2 20.6 2 16.6c0-3.9 3.2-7.2 7.1-7.3v3.4c-2 .1-3.6 1.7-3.6 3.8 0 2.1 1.7 3.8 3.8 3.8s3.8-1.7 3.8-3.8V2z"/>
+                                   </svg>
+                                     </a>
+
+                                  <a href="" target="_blank"class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-800 hover:bg-amber-800 hover:text-white transition duration-300">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-amber-200 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-amber-200 hover:text-white transition">About Us</a></li>
+                        <li><a href="#products" class="text-amber-200 hover:text-white transition">Our Products</a></li>
+                        <li><a href="#process" class="text-amber-200 hover:text-white transition">Our Process</a></li>
+                        <li><a href="#sustainability" class="text-amber-200 hover:text-white transition">Sustainability</a></li>
+                        <li><a href="#contact" class="text-amber-200 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Products</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#products" class="text-amber-200 hover:text-white transition">Sidamo Reserve</a></li>
+                        <li><a href="#products" class="text-amber-200 hover:text-white transition">Yirgacheffe Wild</a></li>
+                        <li><a href="#products" class="text-amber-200 hover:text-white transition">Harrar Mocha</a></li>
+                        <li><a href="#products" class="text-amber-200 hover:text-white transition">Custom Blends</a></li>
+                        <li><a href="#products" class="text-amber-200 hover:text-white transition">Wholesale Options</a></li>
+                        <li><a href="#products" class="text-amber-200 hover:text-white transition">Export Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+                    <p class="text-amber-200 opacity-80 mb-4">Subscribe to our newsletter for updates on new harvests, special offers, and coffee industry insights.</p>
+                    <form class="space-y-3">
+                        <div>
+                            <input type="email" placeholder="Your email address" class="w-full px-4 py-2 rounded-lg bg-amber-800 border border-amber-700 text-amber-100 placeholder-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <button type="submit" class="w-full bg-amber-200 hover:bg-white text-amber-900 font-medium py-2 px-4 rounded-lg transition duration-300">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-amber-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-amber-200 opacity-80 mb-4 md:mb-0">&copy; 2025 Nare  Ware Coffee. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-amber-200 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-amber-200 hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="text-amber-200 hover:text-white transition">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top bg-amber-800 hover:bg-amber-900 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Scroll to Top Button
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.style.display = 'flex';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+        
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Form Submission (Demo)
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            });
+        }
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'968fb8f7b7888c19',t:'MTc1NDE2MDIyNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
